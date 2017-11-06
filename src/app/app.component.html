@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+      <h3>Welcome to Angular 2 Application</h3>
+    <hr/>
+  </div>
+</div>
+<cockpit (serverCreated)='onServerAdded($event)' (blueprintServerCreated)='onBluePrintAdded($event)'></cockpit>
+<hr/>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <app-server-element *ngFor='let server of serverElements' [server]='server'></app-server-element>  
+    </div>
+  </div>
+</div>
